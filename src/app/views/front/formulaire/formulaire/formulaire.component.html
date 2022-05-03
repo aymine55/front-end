@@ -1,0 +1,75 @@
+<div class="slider-area ">
+    <div class="single-slider section-overly slider-height2 d-flex align-items-center"
+        style="background-image:url(assets/front/img/hero/about.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center">
+                        <h2>Get your job</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <br><br><br>
+    
+    <form  id="ft-form"  #f="ngForm" (ngSubmit)="add(f)">
+        
+        <fieldset>
+            <legend>Personal data</legend>
+            <div class="two-cols">
+                <label>
+                    Full name *
+                    <input type="text" required name="fullName" #fullName="ngModel" ngModel>
+                </label>
+                
+            </div>
+            <div class="two-cols">
+                <label>
+                    Email *
+                    <input type="email" required name="email" #email="ngModel" ngModel>
+                </label>
+                <label>
+                    Age *
+                    <input type="number" required name="age" #age="ngModel" ngModel>
+                </label>
+            </div >
+            
+            <div class="two-cols">
+                <label>
+                    Adress
+                    <input type="text" required name="adress" #adress="ngModel" ngModel>
+                </label>
+                <label>
+                    Phone *
+                    <input type="number" required name="phone" #phone="ngModel" ngModel>
+                </label>
+            </div>
+            
+            
+            
+        </fieldset>
+        <fieldset>
+            <legend>Application documents</legend>
+            <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+            <div class="two-cols">
+                <label>
+                    Application letter *
+                    <input type="file" required name="lettre" #lettre="ngModel" ngModel >
+                </label>
+                <label>
+                    Curriculum vitae *
+                    <input type="file" required name="cv" #cv="ngModel" ngModel >
+                </label>
+            </div>
+            <p>Possible file types: DOC, PDF. Maximum file size: 10 MB.</p>
+                    <button  style="float:right" class="btn btn-dark" [disabled]="f.invalid" >Apply</button>
+
+        </fieldset>
+
+    </form>
+    
+</div>
